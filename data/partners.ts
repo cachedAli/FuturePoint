@@ -20,6 +20,7 @@ export const partnerCategories: PartnerCategory[] = [
       "CrowdStrike",
       "Forcepoint",
       "BeyondTrust",
+      "Liztek",
     ],
   },
   {
@@ -52,6 +53,7 @@ export const partnerLogos: string[] = [
   "IBM",
   "F5",
   "BeyondTrust",
+  "Liztek",
 ];
 
 export const confirmedPartnerTiers: Record<string, string> = {

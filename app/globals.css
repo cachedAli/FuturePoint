@@ -133,12 +133,34 @@
   }
 
   .chapter-title {
-    @apply text-4xl font-semibold leading-[1.03] tracking-[-0.04em] text-charcoal sm:text-5xl;
+    @apply text-[clamp(2rem,3.6vw,3.1rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal;
+    max-width: 24ch !important;
+  }
+
+  .page-title {
+    @apply text-[clamp(2.75rem,5vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.05em];
+    max-width: 24ch !important;
+  }
+
+  .section-title {
+    @apply text-[clamp(2rem,3.6vw,3.1rem)] font-semibold leading-[1.05] tracking-[-0.02em];
+    max-width: 24ch !important;
   }
 }
 
 .contact-page > section:nth-child(3) {
   display: none;
+}
+
+.contact-page > section:first-child h1 {
+  font-size: clamp(2.75rem, 5vw, 4.5rem) !important;
+  line-height: 0.98 !important;
+  letter-spacing: -0.05em !important;
+  max-width: 24ch !important;
+}
+
+.contact-page section h2 {
+  max-width: 24ch !important;
 }
 
 

@@ -77,7 +77,7 @@ export function CustomersExperience() {
               initial={{ opacity: 0, y: reduce ? 0 : 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: reduce ? 0 : 0.6, ease: EASE, delay: reduce ? 0 : 0.06 }}
-              className="mt-5 text-[clamp(3rem,5.4vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-charcoal"
+              className="page-title mt-5 text-charcoal"
             >
               <span className="block">Technology delivered</span>
               <span className="block">in the real world.</span>
@@ -201,7 +201,7 @@ export function CustomersExperience() {
                   >
                     <div className="flex h-10 items-center">
                       {engagement.logoFile ? (
-                        <Image src={engagement.logoFile} alt={engagement.customer} width={72} height={40} className="max-h-10 w-auto max-w-[72px] object-contain object-left opacity-80 transition-opacity duration-300 group-hover:opacity-100" />
+                        <Image src={engagement.logoFile} alt={engagement.customer} width={72} height={40} className="max-h-10 w-auto max-w-[72px] object-contain object-left" />
                       ) : (
                         <span className="text-xs font-semibold uppercase tracking-[0.1em] text-charcoal/55">{engagement.customer}</span>
                       )}
@@ -225,7 +225,7 @@ export function CustomersExperience() {
               className="group mt-8 inline-flex cursor-pointer items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-charcoal transition-colors hover:text-lime focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime focus-visible:ring-offset-4 focus-visible:ring-offset-offwhite"
             >
               {showAll ? "Show fewer" : "View more projects"}
-              <ArrowRight className={`size-4 transition-transform duration-300 ${showAll ? "-rotate-90" : "group-hover:translate-x-1"}`} />
+              <ArrowRight className={`size-4 text-charcoal transition-colors group-hover:text-lime ${showAll ? "-rotate-90" : ""}`} />
             </button>
           )}
         </div>
@@ -261,7 +261,7 @@ export function CustomersExperience() {
                       transition={{ duration: reduce ? 0 : 0.35, ease: EASE, delay: reduce ? 0 : Math.min(index * 0.025, 0.2) }}
                       className="group flex min-h-[118px] items-center justify-center border-b border-r border-charcoal/12 p-5 transition-colors duration-300 hover:border-charcoal/25 hover:bg-offwhite-warm"
                     >
-                      {customer.logoFile ? <Image src={customer.logoFile} alt={customer.name} width={130} height={48} className="max-h-12 w-auto max-w-[130px] object-contain opacity-75 transition-[opacity,transform] duration-300 group-hover:-translate-y-0.5 group-hover:opacity-100" /> : <span className="text-center text-sm font-semibold text-charcoal/60">{customer.name}</span>}
+                      {customer.logoFile ? <Image src={customer.logoFile} alt={customer.name} width={130} height={48} className="max-h-12 w-auto max-w-[130px] object-contain" /> : <span className="text-center text-sm font-semibold text-charcoal/60">{customer.name}</span>}
                     </motion.div>
                   ))}
                 </div>
@@ -279,7 +279,7 @@ function SectionHeading({ eyebrow, heading, body, dark = false }: { eyebrow: str
   return (
     <motion.div initial={{ opacity: 0, y: reduce ? 0 : 14 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: reduce ? 0 : 0.55, ease: EASE }} className="max-w-3xl">
       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime">{eyebrow}</p>
-      <h2 className={`mt-5 text-4xl font-semibold leading-[1.03] tracking-[-0.04em] sm:text-5xl ${dark ? "text-white" : "text-charcoal"}`}>{heading}</h2>
+      <h2 className={`section-title mt-5 ${dark ? "text-white" : "text-charcoal"}`}>{heading}</h2>
       {body && <p className={`mt-5 max-w-[60ch] text-base leading-7 sm:text-lg ${dark ? "text-silver" : "text-muted-foreground"}`}>{body}</p>}
     </motion.div>
   );

@@ -115,7 +115,7 @@ function ContactColumn() {
           href="/contact"
           className="text-sm font-semibold text-lime transition-colors hover:text-lime-light"
         >
-          Talk to an Expert
+          Contact Us
         </Link>
       </li>
       <li>
@@ -188,7 +188,7 @@ export function SiteFooter() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 text-sm text-[#a8a69c] transition-colors hover:text-lime"
                     >
-                      <SocialIcon name={item.label} className="size-4" />
+                      <SocialIcon name={item.label} className="size-4 text-[#a8a69c]" />
                       {item.label}
                     </a>
                   </li>
@@ -224,7 +224,7 @@ export function SiteFooter() {
             alt="CachedAli"
             width={54}
             height={24}
-            className=" object-contain transition-[filter] duration-200 group-hover:grayscale"
+            className="object-contain"
           />
         </a>
       </div>

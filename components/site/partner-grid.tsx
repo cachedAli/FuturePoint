@@ -6,19 +6,21 @@ import { siteContent } from "@/data/site-content";
 
 const logoMap: Record<string, string | null> = {
   Cisco: "/partners/cisco.svg",
-  H3C: null,
+  H3C: "/partners/h3c.png",
+  Huawei: "/partners/huawei.webp",
   F5: "/partners/f5.svg",
   Fortinet: "/partners/fortinet.svg",
   "Palo Alto Networks": "/partners/palo-alto-networks.svg",
   "Trend Micro": "/partners/trend-micro.svg",
-  CrowdStrike: null,
-  Forcepoint: null,
-  BeyondTrust: null,
+  CrowdStrike: "/partners/crowdstrike.png",
+  Forcepoint: "/partners/forcepoint.png",
+  BeyondTrust: "/partners/beyondtrust.png",
+  Liztek: "/partners/liztek.png",
   Dahua: null,
   "Dell Technologies": "/partners/dell-technologies.svg",
   Nutanix: "/partners/nutanix.svg",
-  Commvault: null,
-  Sangfor: null,
+  Commvault: "/partners/commvault.png",
+  Sangfor: "/partners/sangfor.png",
   IBM: "/partners/ibm.svg",
 };
 
@@ -71,7 +73,7 @@ export function PartnerGrid() {
 
           <motion.h2
             variants={fadeUp(20)}
-            className="mt-5 max-w-[18ch] text-[clamp(2rem,3.6vw,3.1rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
+            className="mt-5 max-w-[24ch] text-[clamp(2rem,3.6vw,3.1rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
           >
             {heading}
           </motion.h2>
@@ -85,14 +87,14 @@ export function PartnerGrid() {
 
           <motion.div
             variants={fadeUp(24)}
-            className="mt-14 overflow-hidden rounded-[20px] border border-border bg-offwhite transition-colors duration-300 hover:border-charcoal-light"
+            className="mt-14 overflow-hidden rounded-[20px] border border-border bg-offwhite"
           >
             <div className="flex items-center justify-between border-b border-border px-6 py-4 sm:px-9">
               <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-charcoal/50">
                 Our Technology Partners
               </span>
               <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-charcoal/50">
-                15 Partners
+                16 Partners
               </span>
             </div>
 
@@ -135,20 +137,19 @@ export function PartnerGrid() {
                       return (
                         <div
                           key={name}
-                          className="group relative inline-flex cursor-default items-center pb-1.5"
+                          className="inline-flex items-center"
                         >
                           {logo ? (
                             <img
                               src={logo}
                               alt={name}
-                              className="h-8 w-auto max-w-[150px] object-contain opacity-60 grayscale transition-all duration-300 ease-out group-hover:-translate-y-px group-hover:scale-[1.02] group-hover:opacity-100 group-hover:grayscale-0"
+                              className={`h-8 w-auto ${name === "Liztek" ? "max-w-[100px]" : "max-w-[150px]"} object-contain`}
                             />
                           ) : (
-                            <span className="text-sm font-semibold uppercase tracking-[0.06em] text-charcoal/55 transition-all duration-300 ease-out group-hover:-translate-y-px group-hover:text-charcoal">
+                            <span className="text-sm font-semibold uppercase tracking-[0.06em] text-charcoal">
                               {name}
                             </span>
                           )}
-                          <span className="absolute -bottom-0 left-0 h-px w-0 bg-lime transition-all duration-300 ease-out group-hover:w-full" />
                         </div>
                       );
                     })}

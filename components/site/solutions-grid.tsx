@@ -113,7 +113,7 @@ export function SolutionsGrid() {
           </motion.span>
           <motion.h2
             variants={headerItem}
-            className="mt-5 text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-charcoal sm:text-5xl lg:text-[3.25rem]"
+            className="section-title mt-5 text-charcoal"
           >
             Technology built for complex IT environments.
           </motion.h2>
@@ -157,7 +157,7 @@ export function SolutionsGrid() {
                     whileInView={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: reduce ? 0 : 0.65, ease: EASE }}
-                    className="relative aspect-[4/3] w-full overflow-hidden bg-charcoal/5"
+                    className="relative aspect-video w-full overflow-hidden bg-charcoal/5"
                   >
                     <motion.div variants={imageHover} transition={{ duration: reduce ? 0 : 0.7, ease: EASE }} className="absolute inset-0">
                       <Image
@@ -178,11 +178,11 @@ export function SolutionsGrid() {
                       {card.description}
                     </p>
 
-                    <div className="mt-5 flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-charcoal/60">
+                    <div className="mt-5 flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-[0.06em] text-charcoal">
                       {card.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="border border-charcoal/10 px-2.5 py-1"
+                          className="rounded-full border border-charcoal/20 bg-charcoal/10 px-3 py-1"
                         >
                           {tag}
                         </span>

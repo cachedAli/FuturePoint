@@ -33,7 +33,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
               <span className="text-charcoal">{s.title}</span>
             </nav>
 
-            <h1 className="mt-6 text-[clamp(2.25rem,4.5vw,3.5rem)] font-semibold uppercase leading-[1.02] tracking-[-0.02em] text-charcoal">
+            <h1 className="mt-6 text-[clamp(2.25rem,4vw,3.5rem)] font-semibold uppercase leading-[1.02] tracking-[-0.02em] text-charcoal">
               {s.hero.headline}
             </h1>
             <p className="mt-5 max-w-[60ch] text-base leading-7 text-muted-foreground">
@@ -134,7 +134,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
                         {rel.title}
                       </h3>
                     </div>
-                    <ArrowUpRight className="size-5 shrink-0 text-charcoal/40 transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
+                    <ArrowUpRight className="size-5 shrink-0 text-charcoal/40" />
                   </div>
                 </>
               );

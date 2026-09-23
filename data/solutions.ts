@@ -45,11 +45,11 @@ export const solutions: Solution[] = [
     tags: ["Networking", "SD-WAN", "Connectivity"],
     hero: {
       headline: "Network Modernization, Built Secure From the Ground Up",
-      body: "Whatever it’s proactively preventing network disruptions, modernizing for a mobile and cloud-driven world, or managing Wi-Fi day to day — Future Point is the trusted partner organizations turn to first.",
+      body: "Whatever it’s proactively preventing network disruptions, modernizing for a mobile and cloud-driven world, or managing Wi-Fi day to day, Future Point is the trusted partner organizations turn to first.",
       cta: { label: "Talk to a Network Specialist", href: "/contact" },
     },
     challenge:
-      "Growing organizations need networks that scale with AI-driven workloads, stay secure by design, and keep distributed teams connected — without constant firefighting.",
+      "Growing organizations need networks that scale with AI-driven workloads, stay secure by design, and keep distributed teams connected without constant firefighting.",
     capabilities: [
       {
         label: "Network Modernization Services",
@@ -123,7 +123,7 @@ export const solutions: Solution[] = [
       cta: { label: "Talk to a Security Specialist", href: "/contact" },
     },
     challenge:
-      "In an increasingly interconnected world, digital environments face an ever-evolving landscape of cyber threats — from targeted attacks to internal data exposure.",
+      "In an increasingly interconnected world, digital environments face an ever-evolving landscape of cyber threats, from targeted attacks to internal data exposure.",
     capabilities: [
       {
         label: "Detect & Respond",
@@ -161,6 +161,7 @@ export const solutions: Solution[] = [
         "CrowdStrike",
         "Forcepoint",
         "BeyondTrust",
+        "Liztek",
       ],
       note: "Certified engineering across the vendors that power modern security operations.",
     },
@@ -211,7 +212,7 @@ export const solutions: Solution[] = [
       cta: { label: "Talk to a Managed Services Specialist", href: "/contact" },
     },
     challenge:
-      "Internal teams can’t realistically staff round-the-clock monitoring, compliance tracking and vendor coordination alone — and unplanned downtime is expensive.",
+      "Internal teams can’t realistically staff round-the-clock monitoring, compliance tracking and vendor coordination alone, and unplanned downtime is expensive.",
     capabilities: [
       {
         label: "Monitoring & Operations",
@@ -300,7 +301,7 @@ export const solutions: Solution[] = [
       cta: { label: "Talk to a Data Center Specialist", href: "/contact" },
     },
     challenge:
-      "Growing data volumes and always-on expectations mean legacy storage and compute can’t keep up — but replacing it can’t come at the cost of downtime.",
+      "Growing data volumes and always-on expectations mean legacy storage and compute can’t keep up, but replacing it can’t come at the cost of downtime.",
     capabilities: [
       {
         label: "Storage & Backup",

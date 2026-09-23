@@ -54,15 +54,15 @@ const supportStages = [
   },
   {
     title: "Planning & Design",
-    body: "Scope, risk, security architecture, timeline.",
+    body: "We map scope, risk, security architecture and delivery timelines before work begins.",
   },
   {
     title: "Implementation & Integration",
-    body: "Certified engineers, controlled execution.",
+    body: "Certified engineers integrate and test each component through controlled execution.",
   },
   {
     title: "Go-Live & Support",
-    body: "Hypercare, then 24x7x365 monitoring.",
+    body: "Hypercare stabilizes your environment before 24x7x365 monitoring takes over.",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function Page() {
                 </p>
               </Reveal>
               <Reveal delay={0.06}>
-                <h1 className="mt-5 max-w-[12ch] text-[clamp(2.75rem,5.5vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-charcoal">
+                <h1 className="page-title mt-5 max-w-[12ch] text-charcoal">
                   How We Deliver
                 </h1>
               </Reveal>
@@ -109,17 +109,17 @@ export default function Page() {
               <Reveal delay={0.18}>
                 <Link
                   href="/contact"
-                  className="group mt-8 inline-flex items-center gap-2 rounded-lg bg-lime px-7 py-4 text-xs font-bold uppercase tracking-[0.16em] text-charcoal-deep transition-all duration-300 hover:-translate-y-0.5 hover:bg-lime-light hover:shadow-[0_12px_30px_-12px_rgba(151,197,11,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2 focus-visible:ring-offset-offwhite"
+                  className="group mt-8 inline-flex items-center gap-2 rounded-lg border border-lime bg-lime px-7 py-4 text-xs font-bold uppercase tracking-[0.16em] text-charcoal-deep transition-all duration-300 hover:bg-transparent hover:text-lime focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-charcoal focus-visible:ring-offset-2 focus-visible:ring-offset-offwhite"
                 >
                   <span className="sm:hidden">Talk to us</span>
                   <span className="hidden sm:inline">Talk to us about your project</span>
-                  <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="size-4 text-charcoal-deep transition-colors group-hover:text-lime" />
                 </Link>
               </Reveal>
             </div>
 
             <Reveal y={20} delay={0.1} className="relative overflow-hidden rounded-[20px] bg-charcoal/10">
-              <div className="relative aspect-[5/4] min-h-[320px] lg:min-h-[500px]">
+              <div className="relative aspect-[2/1] min-h-[220px] lg:min-h-[320px]">
                 <Image
                   src="/serviceHero.jpeg"
                   alt="Technology professional reviewing data center infrastructure on a tablet"
@@ -139,7 +139,7 @@ export default function Page() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime">
                 Our services
               </p>
-              <h2 className="mt-5 max-w-[15ch] text-4xl font-semibold leading-[1.03] tracking-[-0.04em] text-charcoal sm:text-5xl">
+              <h2 className="section-title mt-5 max-w-[15ch] text-charcoal">
                   Expertise across the IT lifecycle
               </h2>
               <p className="mt-6 max-w-[46ch] text-base leading-7 text-muted-foreground sm:text-lg">
@@ -159,11 +159,11 @@ export default function Page() {
                     key={service.title}
                     delay={index * 0.08}
                     y={24}
-                    className="group flex h-full flex-col overflow-hidden rounded-[12px] border border-charcoal/12 bg-offwhite-warm transition-colors duration-300 hover:border-lime/70 hover:bg-white"
+                    className="group flex h-full flex-col overflow-hidden rounded-[12px] border border-charcoal/12 bg-offwhite-warm transition-colors duration-300 hover:border-lime/70"
                   >
                     <div className="h-[198px] shrink-0 overflow-hidden p-5 sm:h-[206px] sm:p-6 lg:h-[214px] lg:p-7">
                       <div className="flex items-start gap-3">
-                        <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-lime/10 text-charcoal transition-colors duration-300 group-hover:bg-lime group-hover:text-charcoal-deep">
+                        <div className="flex size-9 shrink-0 items-center justify-center rounded-full bg-lime/10 text-charcoal">
                           <Icon className="size-4" strokeWidth={1.65} />
                         </div>
                         <h3 className="max-w-[18ch] pt-0.5 text-2xl font-semibold leading-[1.06] tracking-[-0.035em] text-charcoal transition-transform duration-300 group-hover:translate-x-1 sm:text-[1.7rem]">
@@ -197,7 +197,7 @@ export default function Page() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime">
                 How we support
               </p>
-              <h2 className="mt-5 text-[clamp(2rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal">
+              <h2 className="section-title mt-5 text-charcoal">
                 A Process Built for Certainty.
               </h2>
               <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
@@ -226,41 +226,36 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="bg-offwhite px-0 py-8 sm:px-4 lg:px-6">
-          <div className="relative overflow-hidden rounded-none bg-charcoal-deep px-5 py-20 sm:rounded-[24px] sm:px-8 sm:py-24 lg:px-12 lg:py-28">
-            <div className="hero-motif" aria-hidden="true">
-              <div className="hero-motif__dots" />
-            </div>
-            <div className="relative z-10 mx-auto max-w-[1440px]">
+        <section className="px-5 py-12 sm:px-8 sm:py-16 lg:px-12">
+          <div className="mx-auto max-w-[1440px]">
               <Reveal>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime">
                   What this means for you
                 </p>
-                <h2 className="mt-4 max-w-[18ch] text-[clamp(2rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white">
+                <h2 className="section-title mt-5 text-charcoal">
                   A tried-and-tested approach at every stage.
                 </h2>
               </Reveal>
-              <div className="mt-10 grid border-t border-white/15 sm:grid-cols-3">
+              <div className="mt-10 grid border-t border-charcoal/12 sm:grid-cols-3">
                 {outcomes.map((outcome, index) => (
                   <Reveal
                     key={outcome.title}
                     delay={0.12 + index * 0.08}
                     y={10}
-                    className="group border-b border-white/15 px-1 py-7 transition-colors duration-300 hover:bg-white/[0.025] sm:min-h-[210px] sm:border-b-0 sm:px-6 sm:py-8 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:border-white/15"
+                    className="border-b border-charcoal/12 px-1 py-7 sm:min-h-[210px] sm:border-b-0 sm:px-6 sm:py-8 sm:[&:not(:first-child)]:border-l sm:[&:not(:first-child)]:border-charcoal/12"
                   >
                     <p className="text-xs font-semibold tabular-nums tracking-[0.16em] text-lime">
                       {String(index + 1).padStart(2, "0")}
                     </p>
-                    <h3 className="mt-7 text-xl font-semibold leading-tight text-white">
+                    <h3 className="mt-7 text-xl font-semibold leading-tight text-charcoal">
                       {outcome.title}
                     </h3>
-                    <p className="mt-4 max-w-[30ch] text-sm leading-6 text-silver">
+                    <p className="mt-4 max-w-[30ch] text-sm leading-6 text-muted-foreground">
                       {outcome.body}
                     </p>
                   </Reveal>
                 ))}
               </div>
-            </div>
           </div>
         </section>
 

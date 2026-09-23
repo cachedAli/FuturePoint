@@ -9,7 +9,7 @@ export const siteContent = {
     headline: "Simplifying complex IT systems for smarter business outcomes.",
     subheadline:
       "Future Point is an IT Systems Integrator delivering Networks, Cybersecurity, Data Center and Managed Services.",
-    primaryCta: { label: "Talk to an Expert", href: "/contact" },
+    primaryCta: { label: "Contact Us", href: "/contact" },
     secondaryCta: { label: "Explore Solutions", href: "/solutions" },
   },
   proofStrip: [
@@ -20,7 +20,10 @@ export const siteContent = {
   ],
   whatWeDo: {
     heading: "Intelligent IT Integration",
-    body: "True innovation begins with intelligent integration. We connect diverse systems, applications, and technologies so organizations can modernize infrastructure, strengthen security, and make smarter, data-driven decisions. Four integrated solution areas: Networks, Cybersecurity, Data Center, and Managed Services, each backed by the same certified team and delivery methodology.",
+    intro: "At Future Point, we believe true innovation begins with intelligent integration. Our IT integration services connect diverse systems, applications, and technologies so organizations operate more efficiently and make smarter, data-driven decisions.",
+    details: [
+      "By leveraging advanced methodologies and industry best practices, we help businesses enhance agility and accelerate digital transformation.",
+    ],
   },
   whyFuturePoint: {
     heading: "Why Future Point",
@@ -129,7 +132,7 @@ export const siteContent = {
     eyebrow: "Let's Talk",
     heading: "Ready to simplify your IT?",
     body: "Talk to our team about your network, security, infrastructure, or managed services needs.",
-    cta: { label: "Talk to an Expert", href: "/contact" },
+    cta: { label: "Contact Us", href: "/contact" },
   },
   footer: {
     solutions: [

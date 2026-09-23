@@ -84,7 +84,7 @@ export function SiteHeader({
           className="group hidden items-center gap-2 rounded-lg border border-lime bg-lime px-4 py-3 text-[11px] font-bold uppercase tracking-[0.13em] text-charcoal-deep transition-all hover:bg-transparent hover:text-lime lg:inline-flex"
         >
           {siteContent.hero.primaryCta.label}
-          <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          <ArrowUpRight className="size-4 text-charcoal-deep transition-colors group-hover:text-lime" />
         </Link>
 
         <Button
@@ -95,7 +95,7 @@ export function SiteHeader({
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          {mobileOpen ? <X className="size-5 text-white" /> : <Menu className="size-5 text-white" />}
         </Button>
       </div>
 
@@ -121,10 +121,10 @@ export function SiteHeader({
               <Link
                 href={siteContent.hero.primaryCta.href}
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-lime bg-lime px-4 py-4 text-sm font-bold uppercase tracking-[0.14em] text-charcoal-deep"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-lg border border-lime bg-lime px-4 py-4 text-sm font-bold uppercase tracking-[0.14em] text-charcoal-deep transition-colors hover:bg-transparent hover:text-lime"
               >
                 {siteContent.hero.primaryCta.label}
-                <ArrowUpRight className="size-4" />
+                <ArrowUpRight className="size-4 text-charcoal-deep transition-colors group-hover:text-lime" />
               </Link>
             </div>
           </nav>
