@@ -23,7 +23,7 @@ function SolutionCard({ s, index }: { s: Solution; index: number }) {
       <Link href={`/solutions/${s.slug}`} className="group block">
         <motion.div
           layoutId={`sol-hero-${s.slug}`}
-          className="relative aspect-[16/10] overflow-hidden rounded-[16px]"
+          className="relative aspect-video overflow-hidden rounded-[16px]"
         >
           <img
             src={s.heroImage}
@@ -41,7 +41,7 @@ function SolutionCard({ s, index }: { s: Solution; index: number }) {
           {s.tags.map((t) => (
             <span
               key={t}
-              className="rounded-full border border-charcoal/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-charcoal/60"
+              className="rounded-full border border-charcoal/20 bg-charcoal/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.06em] text-charcoal"
             >
               {t}
             </span>
@@ -50,7 +50,7 @@ function SolutionCard({ s, index }: { s: Solution; index: number }) {
 
         <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-charcoal transition-colors duration-200 group-hover:text-lime">
           Explore Solution
-          <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
+          <ArrowRight className="size-4 text-charcoal transition-colors group-hover:text-lime" />
         </span>
       </Link>
     </motion.div>
@@ -73,7 +73,7 @@ export function SolutionsHub() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime">
             {hubContent.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-[18ch] text-[clamp(2.5rem,5.5vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.03em] text-charcoal">
+          <h1 className="page-title mt-5 max-w-[18ch] text-charcoal">
             {hubContent.headline}
           </h1>
           <p className="mt-6 max-w-[60ch] text-base leading-7 text-muted-foreground">
@@ -102,7 +102,7 @@ export function SolutionsHub() {
             one accountable partner.
           </p>
           <div className="mt-12">
-            <PartnerLogoGrid names={partnerLogos} count={15} />
+            <PartnerLogoGrid names={partnerLogos} count={16} />
           </div>
         </Reveal>
       </section>

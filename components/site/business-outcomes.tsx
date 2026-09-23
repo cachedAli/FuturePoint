@@ -26,7 +26,7 @@ export function BusinessOutcomes({ solution }: { solution: Solution }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: reduce ? 0 : 0.45, ease: EASE, delay: reduce ? 0 : 0.05 }}
-          className="mt-4 max-w-[18ch] text-[clamp(2rem,3.5vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-white"
+          className="section-title mt-5 text-white"
         >
           {bo.heading}
         </motion.h2>

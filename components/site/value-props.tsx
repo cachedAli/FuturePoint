@@ -52,15 +52,10 @@ export function ValueProps() {
 
   return (
     <section
-      className="relative mx-0 my-3 overflow-hidden rounded-none bg-[#0d0d0c] py-12 sm:mx-4 sm:my-4 sm:rounded-[24px] sm:py-16 lg:mx-6"
+      className="relative bg-offwhite px-5 py-12 sm:px-8 sm:py-16 lg:px-12"
       aria-labelledby="why-future-point-heading"
     >
-      {/* Dot-matrix background (reusing hero's pattern via CSS classes) */}
-      <div className="hero-motif" aria-hidden="true">
-        <div className="hero-motif__dots" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-[1200px] px-5 sm:px-5 md:px-8 lg:px-12">
+      <div className="relative z-10 mx-auto max-w-[1440px]">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -68,22 +63,22 @@ export function ValueProps() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div id="why-future-point-heading">
-            <p className="inline-block text-xs font-semibold uppercase tracking-[0.08em] text-[#97C459] mb-4">
+            <p className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-lime-dark">
                WHY FUTURE POINT
             </p>
 
-            <h2 className="mt-4 text-[32px] sm:text-[36px] font-semibold text-white leading-[1.25] max-w-[560px]">
+            <h2 className="mt-5 max-w-[24ch] text-[clamp(2rem,3.6vw,3.1rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal">
               Not just a vendor. A partner who owns the outcome.
             </h2>
 
-            <p className="mt-3 text-sm text-[#85837a] max-w-[480px] leading-relaxed">
+            <p className="mt-5 max-w-[58ch] text-base leading-7 text-muted-foreground">
               Four reasons enterprise teams choose Future Point over a generic reseller.
             </p>
           </div>
 
           {/* Card grid - hairline grid with shared borders */}
           <motion.div
-            className="mt-8 rounded-[10px] border border-[#232320] bg-[#131311] overflow-hidden"
+            className="mt-14 overflow-hidden rounded-[10px] border border-charcoal/12 bg-offwhite-warm"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -95,15 +90,15 @@ export function ValueProps() {
                   key={card.title}
                   className={`
                     relative group flex flex-col min-h-0 p-5 sm:min-h-[264px] sm:p-6
-                    border-r border-[#232320] border-b border-[#232320]
+                    border-r border-charcoal/12 border-b border-charcoal/12
                     ${idx >= 3 ? "lg:border-b-0" : ""}
                     ${idx % 4 === 3 ? "border-r-0" : ""}
                     ${idx >= 4 ? "lg:border-t-0" : ""}
-                    bg-[#131311]
-                    transition-colors duration-150 hover:bg-[#191916]
+                    bg-offwhite-warm
+                    transition-colors duration-150 hover:bg-white
                   `}
                 >
-                  <div className="flex size-[22px] items-center justify-center mb-5">
+                  <div className="mb-5 flex size-[22px] items-center justify-center">
                     <card.icon
                       size={22}
                       strokeWidth={1.6}
@@ -113,13 +108,13 @@ export function ValueProps() {
                     />
                   </div>
 
-                  <h3 className="text-[15px] font-semibold text-white mb-2">
+                  <h3 className="mb-2 text-[15px] font-semibold text-charcoal">
                     {card.title}
                   </h3>
-                  <p className="text-[13px] leading-[1.55] text-[#85837a]">
+                  <p className="text-[13px] leading-[1.55] text-muted-foreground">
                     {card.body}
                   </p>
-                  <p className="mt-5 border-t border-[#232320] pt-4 text-[12px] leading-[1.5] text-[#97C459] sm:mt-auto">
+                  <p className="mt-5 border-t border-charcoal/12 pt-4 text-[12px] leading-[1.5] text-[#587500] sm:mt-auto">
                     {card.micro}
                   </p>
                 </div>

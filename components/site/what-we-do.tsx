@@ -21,12 +21,19 @@ export function WhatWeDo() {
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-lime">
               What We Do
             </span>
-            <h2 className="mt-4 text-3xl font-semibold leading-[1.02] tracking-[-0.04em] text-charcoal sm:text-4xl lg:text-5xl">
+            <h2 className="section-title mt-5 text-charcoal">
               {whatWeDo.heading}
             </h2>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground text-balance">
-              {whatWeDo.body}
+            <p className="mt-6 max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+              {whatWeDo.intro}
             </p>
+            <div className="mt-5 max-w-xl space-y-4 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+              {whatWeDo.details.map((detail) => (
+                <p key={detail}>
+                  {detail}
+                </p>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
@@ -34,7 +41,7 @@ export function WhatWeDo() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: reduce ? 0 : 0.8, ease: "easeOut" }}
-            className="relative aspect-[4/3] w-full overflow-hidden rounded-[16px] border border-charcoal/10"
+            className="relative aspect-[16/11] w-full overflow-hidden rounded-[16px] border border-charcoal/10"
           >
             <Image
               src="/whatWeDo.jpg"

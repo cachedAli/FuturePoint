@@ -122,7 +122,7 @@ export function CustomerGrid() {
             </span>
             <span className="inline-flex items-center gap-1 font-semibold text-[#97C459]">
               {cta.label}
-              <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowUpRight className="size-4" />
             </span>
           </Link>
         </div>
@@ -141,13 +141,13 @@ function LogoCell({ name, logo }: { name: string; logo: string | null }) {
         src={logo}
         alt={name}
         onError={() => setErrored(true)}
-        className="max-h-10 w-auto max-w-[130px] object-contain transition-[transform] duration-[280ms] ease-out group-hover:scale-[1.03] group-hover:duration-200"
+        className="max-h-10 w-auto max-w-[130px] object-contain"
       />
     );
   }
 
   return (
-    <span className="text-center text-sm font-semibold uppercase leading-tight tracking-[0.04em] text-[#85837a] transition-all duration-300 ease-out group-hover:scale-[1.03] group-hover:text-white">
+    <span className="text-center text-sm font-semibold uppercase leading-tight tracking-[0.04em] text-[#85837a]">
       {name}
     </span>
   );

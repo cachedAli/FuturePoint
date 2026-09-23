@@ -166,7 +166,7 @@ export function CustomerProof({ solution }: { solution: Solution }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: reduce ? 0 : 0.55, ease: EASE, delay: reduce ? 0 : 0.05 }}
-        className="mt-4 text-[clamp(2rem,4vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
+        className="section-title mt-5 text-charcoal"
       >
         Proven in the field.
       </motion.h2>
@@ -208,7 +208,7 @@ export function CustomerProof({ solution }: { solution: Solution }) {
                         key={part}
                         src={logo}
                         alt={part}
-                        className="max-h-11 max-w-[68px] object-contain object-left opacity-90 transition-opacity duration-300 group-hover:opacity-100"
+                        className="max-h-11 max-w-[68px] object-contain object-left"
                       />
                     ) : (
                       <span

@@ -20,8 +20,8 @@ export default function Home() {
         <WhatWeDo />
         <SolutionsGrid />
         <ValueProps />
-        <PartnerGrid />
         <CustomerGrid />
+        <PartnerGrid />
         <FinalCta />
       </main>
       <SiteFooter />

@@ -27,11 +27,11 @@ export function Hero() {
           <div className="flex flex-col gap-4 sm:flex-row">
             <Link href={hero.primaryCta.href} className="group inline-flex items-center justify-center gap-3 rounded-lg border border-lime bg-lime px-6 py-4 text-xs font-bold uppercase tracking-[0.16em] text-charcoal-deep transition-all hover:bg-transparent hover:text-lime">
               {hero.primaryCta.label}
-              <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              <ArrowUpRight className="size-4 text-charcoal-deep transition-colors group-hover:text-lime" />
             </Link>
             <Link href={hero.secondaryCta.href} className="group inline-flex items-center justify-center gap-3 rounded-lg border border-white/20 px-6 py-4 text-xs font-bold uppercase tracking-[0.16em] text-white transition-all hover:border-lime hover:text-lime">
               {hero.secondaryCta.label}
-              <ArrowDownRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
+              <ArrowDownRight className="size-4 text-white transition-colors group-hover:text-lime" />
             </Link>
           </div>
         </div>
