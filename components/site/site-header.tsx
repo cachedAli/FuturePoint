@@ -91,11 +91,11 @@ export function SiteHeader({
           onClick={() => setMobileOpen(!mobileOpen)}
           variant="ghost"
           size="icon-lg"
-          className="flex border border-white/15 text-white hover:bg-white/10 hover:text-lime lg:hidden"
+          className={`flex cursor-pointer border border-white/15 hover:bg-white/10 focus-visible:text-white active:text-white aria-expanded:border-white/40 lg:hidden ${mobileOpen ? "text-charcoal-deep aria-expanded:text-charcoal-deep [&_svg]:text-charcoal-deep" : "text-white hover:text-white [&_svg]:text-white"}`}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <X className="size-5 text-white" /> : <Menu className="size-5 text-white" />}
+          {mobileOpen ? <X className="size-5 text-charcoal-deep" /> : <Menu className="size-5 text-white" />}
         </Button>
       </div>
 

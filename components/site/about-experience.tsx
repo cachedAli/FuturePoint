@@ -12,6 +12,12 @@ const leaders = [
   ["Zahid Mahmood", "Director Operations", "Leads operations, channels and logistics while driving delivery excellence across managed-services contracts."],
   ["Mian Haseeb Tariq", "BU Head South", "Leads consultative technology sales, enterprise accounts and channel development across the southern region."],
 ] as const;
+const leaderImages: Record<string, string> = {
+  "Javed Hashmi": "/leadership/javed-hashmi-hd.jpeg",
+  "Muhammad Ali Khalid": "/leadership/muhammad-ali-khalid-hd.jpeg",
+  "Zahid Mahmood": "/leadership/zahid-mahmood-hd.jpeg",
+  "Mian Haseeb Tariq": "/leadership/mian-haseeb-tariq-hd.jpeg",
+};
 const credentials = [
   { title: "Networking", description: "Cisco-certified expertise for resilient enterprise connectivity.", highlights: ["CCIE", "CCNA", "CCNP", "CCDA"], items: ["CCIE Routing & Switching", "CCIE Unified Communication", "CCIE Service Provider", "CCNA, CCNP & CCDA"] },
   { title: "Security", description: "Security capability spanning protection, response and assurance.", highlights: ["Trend Micro", "CISM", "PCNSA", "Fortinet"], items: ["TrendAI Cloud, Endpoint, Network & Email Security", "CISM", "Palo Alto Cybersecurity Practitioner & PCNSA", "Fortinet Certified Associate & Fundamentals"] },
@@ -25,9 +31,45 @@ const awards = [
   ["2025-26", ["Cisco Wireless Solution Partner of the Year", "Pakistan Excellence Award", "Huawei Emerging Partner"]],
 ] as const;
 const latestAwards: ReadonlyArray<{ organization?: string; title: string }> = [
+  { organization: "Cisco", title: "Network Partner of the Year" },
+  { organization: "Cisco", title: "AI Deal Partner of the Year" },
+  { organization: "Cisco", title: "Excellence Award for Muhammad Ali Khalid" },
   { organization: "Cisco", title: "Wireless Solution Partner of the Year" },
   { title: "Pakistan Excellence Award" },
   { organization: "Huawei", title: "Emerging Partner" },
+] as const;
+const recentAwardStories = [
+  {
+    title: "Cisco Award-Winning Partner",
+    description: "Recognised for a year of trusted partnership and delivery.",
+    fit: "cover",
+    images: [
+      { src: "/awards/cisco-award-winning-partner.jpeg", alt: "Future Point team holding Cisco awards" },
+      { src: "/awards/cisco-team-celebration.jpeg", alt: "Future Point team at the Cisco Partner Awards" },
+      { src: "/awards/cisco-team-photo.jpeg", alt: "Future Point team celebrating Cisco recognition" },
+    ],
+  },
+  {
+    title: "Cisco Network Partner of the Year",
+    description: "Honoured for excellence in enterprise networking solutions.",
+    fit: "cover",
+    images: [
+      { src: "/awards/cisco-networking-trophies.jpeg", alt: "Cisco Network Partner of the Year trophy" },
+      { src: "/awards/cisco-networking-partner.jpeg", alt: "Future Point receiving Cisco Network Partner of the Year recognition" },
+    ],
+  },
+  {
+    title: "Cisco AI Deal Partner of the Year",
+    description: "Recognised for delivering impactful AI-led customer outcomes.",
+    fit: "cover",
+    images: [{ src: "/awards/cisco-ai-deal-partner.jpeg", alt: "Future Point receiving Cisco AI Deal Partner of the Year recognition" }],
+  },
+  {
+    title: "Excellence Award for Muhammad Ali Khalid",
+    description: "Presented in recognition of outstanding leadership and commitment.",
+    fit: "cover-bottom",
+    images: [{ src: "/awards/muhammad-ali-khalid-excellence.jpeg", alt: "Cisco Excellence in Action award for Muhammad Ali Khalid" }],
+  },
 ] as const;
 
 function Placeholder({ label, ratio, dark = false }: { label: string; ratio: string; dark?: boolean }) {
@@ -65,7 +107,7 @@ export function AboutExperience() {
   <section id="team" className="px-5 pt-16 sm:px-8 sm:pt-20 lg:px-12 lg:pt-20">
     <div className="mx-auto max-w-[1440px]">
       <Reveal><p className="eyebrow">Leadership</p><h2 className="chapter-title mt-5 max-w-[18ch]">The people behind Future Point.</h2></Reveal>
-      <div className="mt-12 grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:gap-x-10 lg:gap-y-14">{leaders.map(([name, role, bio], i) => <Reveal key={name} delay={i * .05}><article>{/* IMAGE NEEDED: Real leadership portrait of the named person. Consistent editorial lighting and crop, with room around the subject. Portrait aspect ratio approximately 4:3.3. */}<div className="overflow-hidden"><Placeholder label={`${name.toUpperCase()} / PORTRAIT`} ratio="4 / 3.3" /></div><div className="mt-5"><h3 className="text-2xl font-semibold tracking-[-.03em] text-charcoal">{name}</h3><p className="mt-2 text-xs font-semibold uppercase tracking-[.16em] text-charcoal/55">{role}</p><p className="mt-4 max-w-[50ch] text-sm leading-6 text-muted-foreground">{bio}</p></div></article></Reveal>)}</div>
+      <div className="mt-12 grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:gap-x-10 lg:gap-y-14">{leaders.map(([name, role, bio], i) => <Reveal key={name} delay={i * .05}><article><div className="relative aspect-[4/3.3] overflow-hidden rounded-[16px] bg-white"><Image src={leaderImages[name]} alt={`${name} portrait`} fill sizes="(min-width: 1024px) 45vw, (min-width: 640px) 50vw, 100vw" className="object-contain" /></div><div className="mt-5"><h3 className="text-2xl font-semibold tracking-[-.03em] text-charcoal">{name}</h3><p className="mt-2 text-xs font-semibold uppercase tracking-[.16em] text-charcoal/55">{role}</p><p className="mt-4 max-w-[50ch] text-sm leading-6 text-muted-foreground">{bio}</p></div></article></Reveal>)}</div>
     </div>
   </section>
 
@@ -78,12 +120,14 @@ export function AboutExperience() {
       </div>
 
       <div className="mt-24 pt-16 lg:mt-28 lg:pt-20">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.45fr)_minmax(300px,.85fr)] lg:items-center lg:gap-16">
+        <div><Reveal><p className="eyebrow">Recent updates</p><h2 className="section-title mt-5 max-w-[22ch] text-white">Celebrating Cisco recognition.</h2><p className="mt-6 max-w-[58ch] text-base leading-7 text-white/65 sm:text-lg sm:leading-8">Celebrating Cisco recognition for outstanding partnership, networking delivery, AI-led deal execution and individual excellence.</p></Reveal><div className="mt-10 grid gap-6 lg:grid-cols-2">{recentAwardStories.map((story, storyIndex) => <Reveal key={story.title} delay={storyIndex * .06} className={`border-t border-white/15 pt-7 lg:pt-8 ${storyIndex < 2 ? "lg:col-span-full" : ""}`}><article><div><p className="text-xs font-semibold uppercase tracking-[.18em] text-lime">Cisco</p><h3 className={`mt-4 max-w-none font-semibold leading-[1.16] tracking-[-.03em] ${storyIndex > 1 ? "text-xl sm:text-2xl lg:whitespace-nowrap" : "text-2xl sm:text-3xl"}`}>{story.title}</h3><p className="mt-4 max-w-[36ch] text-sm leading-6 text-white/65 sm:text-base">{story.description}</p></div><div className={`mt-7 grid gap-2 ${story.images.length === 1 ? "max-w-[620px] grid-cols-1" : story.images.length === 3 ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-1 sm:grid-cols-2"}`}>{story.images.map(image => <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-[16px]"><Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 46vw, 100vw" className={`object-cover ${story.fit === "cover-bottom" ? "object-bottom" : ""} transition-transform duration-500 hover:scale-[1.03]`} /></div>)}</div></article></Reveal>)}</div></div>
+
+        <div className="mt-20 grid gap-10 lg:mt-24 lg:grid-cols-[minmax(0,1.45fr)_minmax(300px,.85fr)] lg:items-center lg:gap-16">
           <Reveal><p className="eyebrow">Industry recognition</p><h2 className="section-title mt-5 max-w-[18ch] text-white">Recognized for the work behind the technology.</h2><p className="mt-6 max-w-[42ch] text-base leading-7 text-white/65 sm:text-lg sm:leading-8">Independent recognition of Future Point&apos;s technology delivery, partnerships and industry work.</p></Reveal>
           <Reveal delay={.08}><div className="relative aspect-[4/3] overflow-hidden rounded-[16px]"><Image src="/award.jpg" alt="Corporate award trophy in an office setting" fill sizes="(min-width: 1024px) 34vw, 100vw" className="object-cover brightness-[.72] saturate-[.72]" /></div></Reveal>
         </div>
 
-        <div className="mt-12 lg:mt-14"><Reveal className="flex flex-wrap items-baseline justify-between gap-4 border-b border-white/20 pb-5"><p className="eyebrow">Latest recognition</p><p className="text-sm font-medium text-white/55">{awards[3][0]}</p></Reveal><div className="grid lg:grid-cols-3">{latestAwards.map((award, i) => <Reveal key={award.title} delay={i * .07} className={`border-b border-white/15 py-8 lg:border-b-0 lg:py-9 ${i ? "lg:border-l lg:pl-8" : "lg:pr-8"}`}><div className="min-h-[18px]">{award.organization && <p className="text-xs font-semibold uppercase tracking-[.18em] text-lime">{award.organization}</p>}</div><h3 className="mt-4 max-w-[18ch] text-2xl font-semibold leading-[1.16] tracking-[-.03em] sm:text-3xl">{award.title}</h3></Reveal>)}</div></div>
+        <div className="mt-12 lg:mt-14"><Reveal className="flex flex-wrap items-baseline justify-between gap-4 border-b border-white/20 pb-5"><p className="eyebrow">Latest recognition</p><p className="text-sm font-medium text-white/55">{awards[3][0]}</p></Reveal><div className="grid sm:grid-cols-2 lg:grid-cols-3">{latestAwards.map((award, i) => <Reveal key={award.title} delay={i * .07} className={`border-b border-white/15 py-8 sm:px-7 lg:py-9 ${i % 2 && i !== 3 ? "sm:border-l" : "sm:pl-0"} ${[1, 2, 4, 5].includes(i) ? "lg:border-l lg:pl-8" : "lg:pl-0 lg:pr-8"}`}><div className="min-h-[18px]">{award.organization && <p className="text-xs font-semibold uppercase tracking-[.18em] text-lime">{award.organization}</p>}</div><h3 className="mt-4 max-w-[18ch] text-2xl font-semibold leading-[1.16] tracking-[-.03em] sm:text-3xl">{award.title}</h3></Reveal>)}</div></div>
 
         <div className="mt-14 lg:mt-16"><Reveal><p className="eyebrow">Recognition through the years</p></Reveal><div className="mt-7 grid border-t border-white/20 lg:grid-cols-3">{[...awards.slice(0, 3)].reverse().map(([year, items], i) => <Reveal key={year} delay={i * .07} className={`border-b border-white/15 py-7 lg:border-b-0 lg:py-8 ${i ? "lg:border-l lg:pl-8" : "lg:pr-8"}`}><p className="text-sm font-medium text-white/55">{year}</p><ul className="mt-5 space-y-2 text-base font-semibold leading-snug tracking-[-.02em]">{items.map(item => <li key={item}>{item}</li>)}</ul></Reveal>)}</div></div>
       </div>
