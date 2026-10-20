@@ -110,14 +110,14 @@ export function SiteHeader({
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className={`border-b border-white/10 px-1 py-4 text-sm font-semibold uppercase tracking-[0.16em] transition-colors hover:text-lime ${
+                className={`border-b border-white/10 px-1 py-4 text-sm font-semibold uppercase tracking-[0.16em] transition-colors last:border-b-0 hover:text-lime ${
                   isActive(item.href) ? "text-lime" : "text-white/75"
                 }`}
               >
                 {item.label}
               </Link>
             ))}
-            <div className="mt-5 border-t border-white/10 pt-6">
+            <div className="mt-5 pt-6">
               <Link
                 href={siteContent.hero.primaryCta.href}
                 onClick={() => setMobileOpen(false)}
